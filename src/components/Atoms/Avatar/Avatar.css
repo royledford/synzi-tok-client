@@ -1,0 +1,19 @@
+.avatar {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--brandcolor);
+  color: white;
+}
+
+.avatar-inner {
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 800;
+}
+
+.avatar-img {
+  background-size: cover;
+  border-radius: 50%;
+}

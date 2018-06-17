@@ -1,0 +1,17 @@
+.IncomingNotice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+
+.IncomingNotice-button {
+  width: 150px;
+}
+
+.IncomingNotice-button-secondary {
+  background-color: #ccc;
+}
