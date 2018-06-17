@@ -24,6 +24,12 @@ export default class HomeContainer extends Component {
       callerName: '',
       startVideo: false,
     }
+
+    this.subscriberProperties = {
+      width: 1024,
+      height: 768,
+    };
+
     this.socket = io(process.env.REACT_APP_SOCKET_URL)
     this.handleFavoriteClick = this.handleFavoriteClick.bind(this)
     this.cancelCall = this.cancelCall.bind(this)
@@ -120,7 +126,7 @@ export default class HomeContainer extends Component {
             token="T1==cGFydG5lcl9pZD00NjEzOTQ3MiZzaWc9MTczOTYwMzE4NGQ2MGQ1ZjM2MzQ5MzBiYWRkMDkyZTViNzY1ODQwYTpzZXNzaW9uX2lkPTJfTVg0ME5qRXpPVFEzTW41LU1UVXlPVEkxTVRReE5qRXhNSDQwY1V4SldURk9iekkxU2xCSFVqbEdZWGRpWkhoNWFtaC1mZyZjcmVhdGVfdGltZT0xNTI5MjUxNDQzJm5vbmNlPTAuODQwOTgxNTAyNTU5OTAxNyZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTMxODQzNDQyJmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9">
             <OTPublisher />
             <OTStreams>
-              <OTSubscriber />
+              <OTSubscriber properties={this.subscriberProperties}/>
             </OTStreams>
           </OTSession>
         </React.Fragment>
